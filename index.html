@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project 4: ToDo List</title>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/plugins/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/plugins/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/plugins/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Daniel Cobb | Project 4: To Do List App | 4/27/16 -->
+</head>
+<body>
+    <header><!-- Start header -->
+        <h1>tasker.</h1>
+        <h4>Keep today simple.</h4>
+    </header><!-- End header -->
+    <div class="container"><!-- Start main body container -->
+        <div class="current-task"><!-- Start current task wrapper -->
+            <div class="add-new"><!-- Start add new task wrapper -->
+                <button>Add A New Task</button>
+            </div><!-- End add new -->
+            <ul id="task-list" class="sortable connected-task"><!-- Start task list -->
+
+            </ul><!-- End task List -->
+        </div><!-- End current task wrapper  -->
+        <div class="completed"><!-- Start competed task wrapper -->
+            <h3>Completed Tasks:</h3>
+            <ul id="completed-task" class="connected-task"><!-- Start completed task list -->
+
+            </ul><!-- End completed task list -->
+        </div><!-- End completed wrapper -->
+    </div><!-- End main body container -->
+    <!-- Modal Window to Add new Tasks -->
+    <div id="new-todo" title="Add a New Task">
+        <form>
+            <p>
+                <label for="new-title">Title:</label>
+                <input type="text" name="new-title" id="new-title"/>
+            </p>
+            <p>
+                <label for="new-date">Date Due:</label>
+                <input type="text" name="new-date" id="new-date"/>
+            </p>
+            <p>
+                <label for="new-desc">Description:</label>
+                <input type="text" name="new-desc" id="new-desc"/>
+            </p>
+        </form>
+    </div>
+    <!-- Modal to Edit tasks -->
+    <div id="edit-todo" title="Edit a Task">
+        <form>
+            <p>
+                <label for="new-title">Title:</label>
+                <input type="text" name="edit-title" id="edit-title"/>
+            </p>
+            <p>
+                <label for="new-date">Date Due:</label>
+                <input type="text" name="edit-date" id="edit-date"/>
+            </p>
+            <p>
+                <label for="new-desc">Description:</label>
+                <input type="text" name="edit-desc" id="edit-desc"/>
+            </p>
+        </form>
+    </div>
+    <!-- Delete Confirm -->
+    <div id="delete-todo" title="Confirm Delete">
+        <h4>Are you sure you want to do this, once it's gone there is no coming back...</h4>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

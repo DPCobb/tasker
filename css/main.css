@@ -1,0 +1,133 @@
+/*
+Daniel Cobb
+Project 4: To Do List App
+4/27/16
+*/
+
+body{
+    max-width:1280px;
+    font: 12pt/normal Helvetica, Arial, sans-serif;
+    color:#21252b;
+    background:#F2F3F5;
+}
+
+/*----- Header -----*/
+header{
+    width:96%;
+    padding:0 2%;
+}
+header h1{
+    font-family: 'Shadows Into Light', cursive;
+    font-size:3em;
+    margin:0;
+    color:#FFCD5A;
+}
+header h4{
+    margin:0;
+}
+
+/*----- Utility Classes -----*/
+button, .ui-button{
+    border:none;
+    padding: .5% 1%;
+    border-radius:10px;
+    background:#9BB1BC;
+    color:#ececec;
+}
+button:hover, .ui-button:hover{
+    cursor: pointer;
+}
+
+/*----- Containers and Wrappers -----*/
+.container{
+    width:96%;
+    padding:1%;
+    margin: 0 auto;
+}
+.add-new{
+    width:98%;
+    margin:2% auto 5%;
+}
+/*----- To Do List -----*/
+#task-list, #completed-task{
+    padding:0;
+    width:100%;
+    min-height:300px;
+}
+#completed-task{
+    border-radius: 10px;
+    border: 1px dashed #9bb1bc;
+}
+#task-list li, #completed-task li{
+    list-style: none;
+    padding:1%;
+    margin:1% 2%;
+    display:inline-block;
+    width:20%;
+    height:200px;
+    background:#FFCD5A;
+    border-radius:3px;
+    transform: rotate(-3deg);
+    box-shadow: 2px 3px 7px #9BB1BC;
+    word-wrap: break-word;
+}
+#task-list li:nth-last-of-type(even), #completed-task li:nth-last-of-type(even){
+    transform: rotate(5deg);
+}
+.delete.ui-button{
+    display:inline-block;
+    padding:0;
+    color:#B5313A;
+    font-weight:800;
+    float: right;
+    background:none;
+}
+.task-title{
+    font-size:1.5em;
+    display:block;
+    font-weight:800;
+}
+
+.task-title label{
+    font-size:.5em;
+}
+.task-date{
+    font-size:.75em;
+    color:#616366;
+    display:block;
+    margin: 1% auto;
+}
+.task-desc{
+    color:#616366;
+}
+.edit{
+    position:absolute;
+    bottom:5px;
+    left:5%;
+    display:inline-block;
+    text-transform: uppercase;
+    font-size: .65em;
+    color:#ececec;
+    padding:3%;
+    border-radius: 10px;
+    font-weight:800;
+    background:#9BB1BC;
+}
+.edit:hover{
+    cursor:pointer;
+}
+/*----- Modal -----*/
+#new-todo, #edit-todo, #delete-todo{
+    display:none;
+}
+
+/*----- Media Querries -----*/
+@media screen and (max-width:650px){
+    #task-list li, #completed-task li{
+        width:80%;
+        transform:rotate(0deg);
+    }
+    #task-list li:nth-last-of-type(even), #completed-task li:nth-last-of-type(even){
+        transform: rotate(0deg);
+    }
+}
